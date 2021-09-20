@@ -127,18 +127,29 @@
 
 # p factorial(5)
 
-# Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array.
-# For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
+# # Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array.
+# # For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
 
-small_numbers = [1, 5, 10]
-large_numbers = [100, 500, 1000]
+# small_numbers = [1, 5, 10]
+# large_numbers = [100, 500, 1000]
 
-def merge_add(array1, array2)
-  array1.each do |number1|
-    array2.each do |number2|
-      p number1 + number2
-    end
-  end
+# def merge_add(array1, array2)
+#   array1.each do |number1|
+#     array2.each do |number2|
+#       p number1 + number2
+#     end
+#   end
+# end
+
+# merge_add(small_numbers, large_numbers)
+
+# Write a method that accepts an array of numbers, selects all numbers less than 10 and adds them together.
+# For example, if the method receives [1, 3, 4, 8, 12, 20, 32], the method should return 16
+
+numbers = [1, 3, 4, 8, 12, 20, 32]
+
+def specific_sum(array)
+  array.select { |number| number < 10 }.reduce(:+)
 end
 
-merge_add(small_numbers, large_numbers)
+p specific_sum(numbers)
