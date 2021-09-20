@@ -57,6 +57,16 @@ one_to100()
 
 # Write a method that prints out every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
 
+def every_other_to100
+  index = 1
+  while index < 100
+    puts index
+    index += 2
+  end
+end
+
+every_other_to100()
+
 # Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
 
 # Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string.

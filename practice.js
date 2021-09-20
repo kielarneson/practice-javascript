@@ -51,7 +51,18 @@ function oneTo100() {
 }
 
 oneTo100();
+
 // Write a method that prints out every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
+
+function everyOtherTo100() {
+  var index = 1;
+  while (index < 100) {
+    console.log(index);
+    index += 2;
+  }
+}
+
+everyOtherTo100();
 
 // Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
 
