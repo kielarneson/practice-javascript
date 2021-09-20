@@ -64,18 +64,33 @@
 
 // everyOtherTo100();
 
-// Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
+// // Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
 
-const numbers = [1, 5, 10, 55, 60, 70, 55];
+// const numbers = [1, 5, 10, 55, 60, 70, 55];
 
-function numberCount(array) {
-  return array.filter((number) => number === 55).length;
-}
+// function numberCount(array) {
+//   return array.filter((number) => number === 55).length;
+// }
 
-console.log(numberCount(numbers));
+// console.log(numberCount(numbers));
 
 // Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string.
 // For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
+
+var strings = ["a", "b", "c", "d", "e"];
+
+function insertString(array) {
+  var index = 0;
+  while (index < array.length) {
+    if (index % 2 !== 0) {
+      array.splice(index, 0, "awesomesauce");
+    }
+    index += 1;
+  }
+  return array;
+}
+
+console.log(insertString(strings));
 
 // Start with the hash: item_amounts = {chair: 5, table: 2}
 // Someone just bought two chairs. Change the hash such that the chair amount is 3.

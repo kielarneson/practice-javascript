@@ -67,20 +67,35 @@
 
 # every_other_to100()
 
-# Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
+# # Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
 
-numbers = [1, 5, 10, 55, 60, 70, 55]
+# numbers = [1, 5, 10, 55, 60, 70, 55]
 
-def number_count(array)
-  # Ruby implicitly includes the return statement
-  # here because it is the last line in the function
-  array.select { |number| number == 55 }.length
-end
+# def number_count(array)
+#   # Ruby implicitly includes the return statement
+#   # here because it is the last line in the function
+#   array.select { |number| number == 55 }.length
+# end
 
-p number_count(numbers)
+# p number_count(numbers)
 
 # Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string.
 # For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
+
+strings = ["a", "b", "c", "d", "e"]
+
+def insert_string(array)
+  index = 0
+  while index < array.length
+    if index.odd?
+      array.insert(index, "awesomesauce")
+    end
+    index += 1
+  end
+  return array
+end
+
+p insert_string(strings)
 
 # Start with the hash: item_amounts = {chair: 5, table: 2}
 # Someone just bought two chairs. Change the hash such that the chair amount is 3.
