@@ -40,31 +40,39 @@
 // cityPopulations.sf = 800000; // same as cityPopulations["sf"]
 // console.log(cityPopulations);
 
-// Write a method that prints out every number from 1 to 100.
+// // Write a method that prints out every number from 1 to 100.
 
-function oneTo100() {
-  var index = 1;
-  while (index <= 100) {
-    console.log(index);
-    index += 1;
-  }
-}
+// function oneTo100() {
+//   var index = 1;
+//   while (index <= 100) {
+//     console.log(index);
+//     index += 1;
+//   }
+// }
 
-oneTo100();
+// oneTo100();
 
-// Write a method that prints out every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
+// // Write a method that prints out every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
 
-function everyOtherTo100() {
-  var index = 1;
-  while (index < 100) {
-    console.log(index);
-    index += 2;
-  }
-}
+// function everyOtherTo100() {
+//   var index = 1;
+//   while (index < 100) {
+//     console.log(index);
+//     index += 2;
+//   }
+// }
 
-everyOtherTo100();
+// everyOtherTo100();
 
 // Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
+
+const numbers = [1, 5, 10, 55, 60, 70, 55];
+
+function numberCount(array) {
+  return array.filter((number) => number === 55).length;
+}
+
+console.log(numberCount(numbers));
 
 // Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string.
 // For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].

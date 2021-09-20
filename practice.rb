@@ -43,31 +43,41 @@
 # city_populations[:sf] = 800000
 # p city_populations
 
-# Write a method that prints out every number from 1 to 100.
+# # Write a method that prints out every number from 1 to 100.
 
-def one_to100
-  index = 1
-  while index <= 100
-    puts index
-    index += 1
-  end
-end
+# def one_to100
+#   index = 1
+#   while index <= 100
+#     puts index
+#     index += 1
+#   end
+# end
 
-one_to100()
+# one_to100()
 
-# Write a method that prints out every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
+# # Write a method that prints out every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
 
-def every_other_to100
-  index = 1
-  while index < 100
-    puts index
-    index += 2
-  end
-end
+# def every_other_to100
+#   index = 1
+#   while index < 100
+#     puts index
+#     index += 2
+#   end
+# end
 
-every_other_to100()
+# every_other_to100()
 
 # Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
+
+numbers = [1, 5, 10, 55, 60, 70, 55]
+
+def number_count(array)
+  # Ruby implicitly includes the return statement
+  # here because it is the last line in the function
+  array.select { |number| number == 55 }.length
+end
+
+p number_count(numbers)
 
 # Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string.
 # For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
