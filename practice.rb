@@ -79,27 +79,31 @@
 
 # p number_count(numbers)
 
-# Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string.
-# For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
+# # Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string.
+# # For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
 
-strings = ["a", "b", "c", "d", "e"]
+# strings = ["a", "b", "c", "d", "e"]
 
-def insert_string(array)
-  index = 0
-  while index < array.length
-    if index.odd?
-      array.insert(index, "awesomesauce")
-    end
-    index += 1
-  end
-  return array
-end
+# def insert_string(array)
+#   index = 0
+#   while index < array.length
+#     if index.odd?
+#       array.insert(index, "awesomesauce")
+#     end
+#     index += 1
+#   end
+#   return array
+# end
 
-p insert_string(strings)
+# p insert_string(strings)
 
 # Start with the hash: item_amounts = {chair: 5, table: 2}
 # Someone just bought two chairs. Change the hash such that the chair amount is 3.
 # The final result should be: {chair: 3, table: 2}
+
+item_amounts = { chair: 5, table: 2 }
+item_amounts[:chair] = 3
+p item_amounts
 
 # Start with the hash: item_amounts = {chair: 5, table: 2}
 # You received 7 desks to sell. Change the hash to include desks.
