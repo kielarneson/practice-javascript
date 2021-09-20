@@ -92,20 +92,24 @@
 
 // console.log(insertString(strings));
 
-// Start with the hash: item_amounts = {chair: 5, table: 2}
-// Someone just bought two chairs. Change the hash such that the chair amount is 3.
-// The final result should be: {chair: 3, table: 2}
+// // Start with the hash: item_amounts = {chair: 5, table: 2}
+// // Someone just bought two chairs. Change the hash such that the chair amount is 3.
+// // The final result should be: {chair: 3, table: 2}
 
-var itemAmounts = { chair: 5, table: 2 };
-// this
-itemAmounts["chair"] = 3;
-// or
-itemAmounts.chair = 3;
-console.log(itemAmounts);
+// var itemAmounts = { chair: 5, table: 2 };
+// // this
+// itemAmounts["chair"] = 3;
+// // or
+// itemAmounts.chair = 3;
+// console.log(itemAmounts);
 
 // Start with the hash: item_amounts = {chair: 5, table: 2}
 // You received 7 desks to sell. Change the hash to include desks.
 // The final result should be: {chair: 5, table: 2, desk: 7}
+
+var itemAmounts = { chair: 5, table: 2 };
+itemAmounts["desk"] = 7;
+console.log(itemAmounts);
 
 // Write a method that accepts a number and returns its factorial.
 // For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.

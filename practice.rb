@@ -97,17 +97,21 @@
 
 # p insert_string(strings)
 
-# Start with the hash: item_amounts = {chair: 5, table: 2}
-# Someone just bought two chairs. Change the hash such that the chair amount is 3.
-# The final result should be: {chair: 3, table: 2}
+# # Start with the hash: item_amounts = {chair: 5, table: 2}
+# # Someone just bought two chairs. Change the hash such that the chair amount is 3.
+# # The final result should be: {chair: 3, table: 2}
 
-item_amounts = { chair: 5, table: 2 }
-item_amounts[:chair] = 3
-p item_amounts
+# item_amounts = { chair: 5, table: 2 }
+# item_amounts[:chair] = 3
+# p item_amounts
 
 # Start with the hash: item_amounts = {chair: 5, table: 2}
 # You received 7 desks to sell. Change the hash to include desks.
 # The final result should be: {chair: 5, table: 2, desk: 7}
+
+item_amounts = { chair: 5, table: 2 }
+item_amounts["desk"] = 7
+p item_amounts
 
 # Write a method that accepts a number and returns its factorial.
 # For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
