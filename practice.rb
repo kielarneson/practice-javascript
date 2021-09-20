@@ -105,16 +105,27 @@
 # item_amounts[:chair] = 3
 # p item_amounts
 
-# Start with the hash: item_amounts = {chair: 5, table: 2}
-# You received 7 desks to sell. Change the hash to include desks.
-# The final result should be: {chair: 5, table: 2, desk: 7}
+# # Start with the hash: item_amounts = {chair: 5, table: 2}
+# # You received 7 desks to sell. Change the hash to include desks.
+# # The final result should be: {chair: 5, table: 2, desk: 7}
 
-item_amounts = { chair: 5, table: 2 }
-item_amounts["desk"] = 7
-p item_amounts
+# item_amounts = { chair: 5, table: 2 }
+# item_amounts["desk"] = 7
+# p item_amounts
 
 # Write a method that accepts a number and returns its factorial.
 # For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+
+def factorial(number)
+  factorial = 1
+  while number > 0
+    factorial *= number
+    number -= 1
+  end
+  return factorial
+end
+
+p factorial(5)
 
 # Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array.
 # For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].

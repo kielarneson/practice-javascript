@@ -103,16 +103,27 @@
 // itemAmounts.chair = 3;
 // console.log(itemAmounts);
 
-// Start with the hash: item_amounts = {chair: 5, table: 2}
-// You received 7 desks to sell. Change the hash to include desks.
-// The final result should be: {chair: 5, table: 2, desk: 7}
+// // Start with the hash: item_amounts = {chair: 5, table: 2}
+// // You received 7 desks to sell. Change the hash to include desks.
+// // The final result should be: {chair: 5, table: 2, desk: 7}
 
-var itemAmounts = { chair: 5, table: 2 };
-itemAmounts["desk"] = 7;
-console.log(itemAmounts);
+// var itemAmounts = { chair: 5, table: 2 };
+// itemAmounts["desk"] = 7;
+// console.log(itemAmounts);
 
 // Write a method that accepts a number and returns its factorial.
 // For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+
+function factorial(number) {
+  var factorial = 1;
+  while (number > 0) {
+    factorial *= number;
+    number -= 1;
+  }
+  return factorial;
+}
+
+console.log(factorial(5));
 
 // Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array.
 // For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
