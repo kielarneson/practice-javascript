@@ -33,3 +33,7 @@ console.log(peopleAges);
 // 7
 var dividedBy2 = numbers.map((number) => number / 2.0);
 console.log(dividedBy2);
+
+// 8
+var firstLetter = strings.map((word) => word[0]);
+console.log(firstLetter);
