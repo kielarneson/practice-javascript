@@ -37,3 +37,7 @@ console.log(dividedBy2);
 // 8
 var firstLetter = strings.map((word) => word[0]);
 console.log(firstLetter);
+
+// 9
+var peopleAgesTimes2 = people.map((person) => person.age * 2);
+console.log(peopleAgesTimes2);
