@@ -41,3 +41,7 @@ console.log(firstLetter);
 // 9
 var peopleAgesTimes2 = people.map((person) => person.age * 2);
 console.log(peopleAgesTimes2);
+
+// 10
+var numberToString = numbers.map((number) => number.toString());
+console.log(numberToString);
