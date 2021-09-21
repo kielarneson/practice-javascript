@@ -12,3 +12,7 @@ var people = [
 ];
 var peopleNames = people.map((person) => person.name);
 console.log(peopleNames);
+
+// 3
+var plus7 = numbers.map((number) => number + 7);
+console.log(plus7);
