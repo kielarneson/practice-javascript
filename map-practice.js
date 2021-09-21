@@ -25,3 +25,7 @@ console.log(plus7);
 // 5
 var stringLength = strings.map((word) => word.length);
 console.log(stringLength);
+
+// 6
+var peopleAges = people.map((person) => person.age);
+console.log(peopleAges);
