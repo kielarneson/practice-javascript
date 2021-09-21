@@ -29,3 +29,7 @@ console.log(stringLength);
 // 6
 var peopleAges = people.map((person) => person.age);
 console.log(peopleAges);
+
+// 7
+var dividedBy2 = numbers.map((number) => number / 2.0);
+console.log(dividedBy2);
