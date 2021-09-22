@@ -32,3 +32,8 @@ console.log(lessThan4Letters);
 // 6
 var itemNameLessThan6Letters = items.filter((item) => item.name.length < 6);
 console.log(itemNameLessThan6Letters);
+
+// 7
+numbers = [8, 23, 0, 44, 1980, 3];
+var numbersLessThan10 = numbers.filter((number) => number < 10);
+console.log(numbersLessThan10);
