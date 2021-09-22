@@ -28,3 +28,7 @@ console.log(evenNumbers);
 strings = ["a", "man", "a", "plan", "a", "canal", "panama"];
 var lessThan4Letters = strings.filter((word) => word.length < 4);
 console.log(lessThan4Letters);
+
+// 6
+var itemNameLessThan6Letters = items.filter((item) => item.name.length < 6);
+console.log(itemNameLessThan6Letters);
