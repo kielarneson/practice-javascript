@@ -37,3 +37,8 @@ console.log(itemNameLessThan6Letters);
 numbers = [8, 23, 0, 44, 1980, 3];
 var numbersLessThan10 = numbers.filter((number) => number < 10);
 console.log(numbersLessThan10);
+
+// 8
+strings = ["big", "little", "good", "bad"];
+var stringFirstLetterNotB = strings.filter((word) => word[0] !== "b");
+console.log(stringFirstLetterNotB);
