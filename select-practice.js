@@ -18,3 +18,8 @@ var items = [
 ];
 var priceGreaterThan5 = items.filter((item) => item.price > 5);
 console.log(priceGreaterThan5);
+
+// 4
+numbers = [2, 4, 5, 1, 8, 9, 7];
+var evenNumbers = numbers.filter((number) => number % 2 === 0);
+console.log(evenNumbers);
