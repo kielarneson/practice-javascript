@@ -42,3 +42,7 @@ console.log(numbersLessThan10);
 strings = ["big", "little", "good", "bad"];
 var stringFirstLetterNotB = strings.filter((word) => word[0] !== "b");
 console.log(stringFirstLetterNotB);
+
+// 9
+var itemPriceLessThan10 = items.filter((item) => item.price < 10);
+console.log(itemPriceLessThan10);
