@@ -23,3 +23,8 @@ console.log(priceGreaterThan5);
 numbers = [2, 4, 5, 1, 8, 9, 7];
 var evenNumbers = numbers.filter((number) => number % 2 === 0);
 console.log(evenNumbers);
+
+// 5
+strings = ["a", "man", "a", "plan", "a", "canal", "panama"];
+var lessThan4Letters = strings.filter((word) => word.length < 4);
+console.log(lessThan4Letters);
