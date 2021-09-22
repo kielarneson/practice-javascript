@@ -46,3 +46,8 @@ console.log(stringFirstLetterNotB);
 // 9
 var itemPriceLessThan10 = items.filter((item) => item.price < 10);
 console.log(itemPriceLessThan10);
+
+// 10
+var numbers = [2, 4, 5, 1, 8, 9, 7];
+var oddNumbers = numbers.filter((number) => number % 2 !== 0);
+console.log(oddNumbers);
