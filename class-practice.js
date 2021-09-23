@@ -102,3 +102,16 @@ function product(array) {
 }
 
 console.log(product([1, 2, 3]));
+
+// Solution 8
+function zero(array) {
+  var count = 0;
+  array.forEach((number) => {
+    if (number === 0) {
+      count++;
+    }
+  });
+  return count;
+}
+
+console.log(zero([1, 4, 6, 8, 0]));
