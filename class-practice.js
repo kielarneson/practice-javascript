@@ -115,3 +115,16 @@ function zero(array) {
 }
 
 console.log(zero([1, 4, 6, 8, 0]));
+
+// Solution 9
+function biggerThanTen(array) {
+  var answer = true;
+  array.forEach((number) => {
+    if (number <= 10) {
+      answer = false;
+    }
+  });
+  return answer;
+}
+
+console.log(biggerThanTen([10, 12]));
