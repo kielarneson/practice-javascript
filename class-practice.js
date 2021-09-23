@@ -130,7 +130,6 @@ function biggerThanTen(array) {
 console.log(biggerThanTen([10, 12]));
 
 // Solution 10
-var words = ["hi", "bill", "adam"];
 console.log(words.join().split(""));
 
 function palindrome(word) {
