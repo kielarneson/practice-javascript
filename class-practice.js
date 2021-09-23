@@ -49,4 +49,19 @@
 // However, do not use the "reverse" method built into Ruby.
 
 // 4
-var numbers = [1, 2, 3, 4, 5];
+
+// Second problem set
+// 2
+const strings = ["letters", "time", "hi"];
+
+function smallestString(array) {
+  var small = array[0];
+  array.forEach(function (string) {
+    if (string.length < small.length) {
+      small = string;
+    }
+  });
+  return small;
+}
+
+console.log(smallestString(strings));
