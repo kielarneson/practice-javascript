@@ -80,3 +80,25 @@ function countA(array) {
 }
 
 console.log(countA(words));
+
+// Solution 5
+function join(array) {
+  var result = "";
+  array.forEach((word) => {
+    result += word + ",";
+  });
+  return result;
+}
+
+console.log(join(["adam", "bill", "tom"]));
+
+// Solution 6
+function product(array) {
+  var product = 1;
+  array.forEach((number) => {
+    product = product * number;
+  });
+  return product;
+}
+
+console.log(product([1, 2, 3]));
