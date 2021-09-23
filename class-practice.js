@@ -65,3 +65,18 @@ function smallestString(array) {
 }
 
 console.log(smallestString(strings));
+
+// 4
+var words = ["hi", "bye", "adam"];
+
+function countA(array) {
+  var count = 0;
+  array.forEach(function (word) {
+    if (word[0] === "a") {
+      count += 1;
+    }
+  });
+  return count;
+}
+
+console.log(countA(words));
