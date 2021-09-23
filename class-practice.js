@@ -128,3 +128,18 @@ function biggerThanTen(array) {
 }
 
 console.log(biggerThanTen([10, 12]));
+
+// Solution 10
+var words = ["hi", "bill", "adam"];
+console.log(words.join().split(""));
+
+function palindrome(word) {
+  var reverseWord = word.split("").reverse().join("");
+  if (word === reverseWord) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(palindrome("radar"));
