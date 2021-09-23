@@ -77,10 +77,16 @@ const players = [
   },
 ];
 
+var feet;
+var inches;
+
 var specificPlayer = players
-  .filter((player) => player["name"] === "Jack Sawyer")
-  .map(
-    (player) =>
-      `Year: ${player["year"]}, Name: ${player["name"]}, Position: ${player["position"]}, Commited to: ${player["committedTo"]}`
-  );
+  .filter((player) => player["name"].toLowerCase() === "jack sawyer".toLowerCase())
+  .map(function (player) {
+    if (player["height"] > 72) {
+      feet = 6;
+      inches = player["height"] - 72;
+    }
+    return `${feet}', ${inches}"`;
+  });
 console.log(specificPlayer);
