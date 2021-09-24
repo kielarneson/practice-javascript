@@ -18,3 +18,15 @@ var items = [
 ];
 var addPrice = items.map((item) => item.price).reduce((sum, current) => sum + current);
 console.log(addPrice);
+
+// 4
+numbers = [5, 10, 8, 3, 9];
+
+var lowestNumber = numbers.reduce(function (lowest, current) {
+  if (current < lowest) {
+    lowest = current;
+  }
+  return lowest;
+});
+
+console.log(lowestNumber);
