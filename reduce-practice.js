@@ -34,3 +34,14 @@ console.log(lowestNumber);
 // 5
 var addStringLengths = strings.map((word) => word.length).reduce((sum, iterations) => sum + iterations);
 console.log(addStringLengths);
+
+// 6
+var lowestPrice = items
+  .map((item) => item.price)
+  .reduce(function (lowest, prices) {
+    if (prices < lowest) {
+      lowest = prices;
+    }
+    return lowest;
+  });
+console.log(lowestPrice);
