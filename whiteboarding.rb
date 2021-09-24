@@ -1,3 +1,4 @@
+# Most used word function
 words = ["the", "quick", "brown", "fox", "jumped", "over", "the", "brown", "dog", "who", "loves", "the", "monkey"]
 
 def most_used_word(array)
@@ -14,3 +15,26 @@ def most_used_word(array)
 end
 
 p most_used_word(words)
+
+# All combos with a sum of 5
+numbers = [1, 2, 3, 4]
+
+def combos_equal_to_five(array)
+  combos = []
+  index1 = 0
+  index2 = 1
+
+  while index1 < array.length
+    while index2 < array.length
+      if array[index1] != array[index2] && array[index1] + array[index2] == 5
+        combos << [array[index1], array[index2]]
+      end
+      index2 += 1
+    end
+    index1 += 1
+    index2 = 0
+  end
+  return combos
+end
+
+p combos_equal_to_five(numbers)
