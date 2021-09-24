@@ -45,3 +45,8 @@ var lowestPrice = items
     return lowest;
   });
 console.log(lowestPrice);
+
+// 7
+numbers = [5, 10, 8, 3];
+var multiply = numbers.reduce((product, iterations) => product * iterations);
+console.log(multiply);
