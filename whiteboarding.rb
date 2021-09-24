@@ -20,21 +20,21 @@ p most_used_word(words)
 numbers = [1, 2, 3, 4]
 
 def combos_equal_to_five(array)
-  combos = []
+  combos = {}
   index1 = 0
   index2 = 1
 
   while index1 < array.length
     while index2 < array.length
       if array[index1] != array[index2] && array[index1] + array[index2] == 5
-        combos << [array[index1], array[index2]]
+        combos[array[index1]] = array[index2]
       end
       index2 += 1
     end
     index1 += 1
     index2 = 0
   end
-  return combos
+  return combos.sort_by { |_key, value| value }.reverse
 end
 
 p combos_equal_to_five(numbers)
