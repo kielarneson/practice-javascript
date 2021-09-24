@@ -30,3 +30,7 @@ var lowestNumber = numbers.reduce(function (lowest, current) {
 });
 
 console.log(lowestNumber);
+
+// 5
+var addStringLengths = strings.map((word) => word.length).reduce((sum, iterations) => sum + iterations);
+console.log(addStringLengths);
