@@ -42,7 +42,7 @@ p combos_equal_to_five(numbers)
 # Computing raw height data into feet and inches
 def height_to_feet_and_inches(number)
   height = number / 12.0
-  feet = height.round
+  feet = height.floor
   inches = number.remainder(12)
 
   if inches == 0
