@@ -45,4 +45,13 @@ var heights = {
   4: height4,
 };
 
-console.log(heights);
+// Finding average of all heights in heights hash
+function heightAverage(hash) {
+  var index = 0;
+
+  while (index < hash.length) {
+    console.log(hash.height);
+  }
+}
+
+heightAverage(heights);
