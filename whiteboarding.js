@@ -40,7 +40,14 @@ var height4 = metricToImperialHeight(9);
 
 var heights = [height1, height2, height3, height4];
 
-// Finding average of all heights in heights hash
-function heightAverage(hash) {}
+// Finding average of all heights in heights array
+function heightAverage(array) {
+  var index = 0;
+
+  while (index < array.length) {
+    console.log(array[index].height);
+    index++;
+  }
+}
 
 heightAverage(heights);
