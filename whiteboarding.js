@@ -43,11 +43,22 @@ var heights = [height1, height2, height3, height4];
 // Finding average of all heights in heights array
 function heightAverage(array) {
   var index = 0;
+  var sum = 0;
 
   while (index < array.length) {
-    console.log(array[index].height);
+    if (array[index].height.feet === undefined) {
+      sum += array[index].height.inches;
+      // console.log(sum);
+    } else if (array[index].height.inches === undefined) {
+      sum += array[index].height.feet * 12;
+      // console.log(sum);
+    } else {
+      sum += array[index].height.feet * 12 + array[index].height.inches;
+      // console.log(sum);
+    }
     index++;
   }
+  var average = sum / array.length;
 }
 
-heightAverage(heights);
+console.log(heightAverage(heights));
