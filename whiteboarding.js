@@ -21,7 +21,8 @@ console.log(heightToFeetAndInches(10));
 // Converting metric to imperial for height
 function metricToImperialHeight(heightInCentimeters) {
   var imperialHeight = Math.round(heightInCentimeters * 0.3937);
-  return imperialHeight;
+  var feet = Math.floor(imperialHeight / 12.0);
+  return feet;
 }
 
 console.log(metricToImperialHeight(176));
