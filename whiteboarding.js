@@ -5,9 +5,14 @@ function heightToFeetAndInches(height) {
 
   if (inches === 0) {
     return { height: { feet: feet } };
+  } else if (feet < 1) {
+    return { height: { inches: inches } };
   } else {
     return { height: { feet: feet, inches: inches } };
   }
 }
 
 console.log(heightToFeetAndInches(76));
+console.log(heightToFeetAndInches(61));
+console.log(heightToFeetAndInches(33));
+console.log(heightToFeetAndInches(10));
