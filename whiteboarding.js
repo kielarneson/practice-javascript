@@ -48,17 +48,15 @@ function heightAverage(array) {
   while (index < array.length) {
     if (array[index].height.feet === undefined) {
       sum += array[index].height.inches;
-      // console.log(sum);
     } else if (array[index].height.inches === undefined) {
       sum += array[index].height.feet * 12;
-      // console.log(sum);
     } else {
       sum += array[index].height.feet * 12 + array[index].height.inches;
-      // console.log(sum);
     }
     index++;
   }
   var average = sum / array.length;
+  var averageFeet = Math.floor(average / 12.0);
 }
 
 console.log(heightAverage(heights));
