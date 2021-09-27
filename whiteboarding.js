@@ -57,6 +57,7 @@ function heightAverage(array) {
   }
   var average = sum / array.length;
   var averageFeet = Math.floor(average / 12.0);
+  var averageInches = Math.round(average % 12.0);
 }
 
 console.log(heightAverage(heights));
