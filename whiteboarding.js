@@ -34,3 +34,6 @@ function metricToImperialHeight(heightInCentimeters) {
 }
 
 console.log(metricToImperialHeight(176));
+console.log(metricToImperialHeight(199));
+console.log(metricToImperialHeight(91));
+console.log(metricToImperialHeight(9));
