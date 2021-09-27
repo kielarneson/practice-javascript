@@ -23,7 +23,14 @@ function metricToImperialHeight(heightInCentimeters) {
   var imperialHeight = Math.round(heightInCentimeters * 0.3937);
   var feet = Math.floor(imperialHeight / 12.0);
   var inches = imperialHeight % 12.0;
-  return inches;
+
+  if (inches === 0) {
+    return { height: { feet: feet } };
+  } else if (feet < 1) {
+    return { height: { inches: inches } };
+  } else {
+    return { height: { feet: feet, inches: inches } };
+  }
 }
 
 console.log(metricToImperialHeight(176));
