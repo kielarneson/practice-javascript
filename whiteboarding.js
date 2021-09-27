@@ -1,6 +1,7 @@
 // Converting players raw height to feet and inches
 function heightToFeetAndInches(height) {
-  var feet = Math.floor(height / 12.0);
+  var feet = height / 12.0;
+  feet = Math.floor(feet);
   var inches = height % 12.0;
 
   if (inches === 0) {
