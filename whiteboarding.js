@@ -33,7 +33,16 @@ function metricToImperialHeight(heightInCentimeters) {
   }
 }
 
-console.log(metricToImperialHeight(176));
-console.log(metricToImperialHeight(199));
-console.log(metricToImperialHeight(91));
-console.log(metricToImperialHeight(9));
+var height1 = metricToImperialHeight(176);
+var height2 = metricToImperialHeight(199);
+var height3 = metricToImperialHeight(91);
+var height4 = metricToImperialHeight(9);
+
+var heights = {
+  1: height1,
+  2: height2,
+  3: height3,
+  4: height4,
+};
+
+console.log(heights);
