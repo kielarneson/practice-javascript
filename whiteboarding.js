@@ -63,3 +63,36 @@ function heightAverage(array) {
 }
 
 console.log(heightAverage(heights));
+
+/* 
+Higher order function example
+
+let total = 0, count = 1;
+while (count <= 10) {
+  total += count;
+  count += 1;
+}
+console.log(total);
+
+Turn the above code into 2 separate functions where one function calls 
+upon the other in order to derive the desired output.
+This is an example of a higher order function 
+*/
+
+function range(start, end) {
+  var range = [];
+  for (let i = start; i <= end; i++) {
+    range.push(i);
+  }
+  return range;
+}
+
+function sum(range) {
+  var sum = 0;
+  range.forEach((number) => (sum += number));
+  return sum;
+}
+
+console.log(sum(range(1, 10)));
+
+//
