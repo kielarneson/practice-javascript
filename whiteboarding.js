@@ -107,24 +107,20 @@ multiples of both three and five print “FizzBuzz".
 Write this as a higher order function
 */
 
-function fizzBuzz() {
-  var index = 1;
+var index = 1;
 
-  while (index <= 100) {
-    if (index % 3 === 0 && index % 5 === 0) {
-      console.log("FizzBuzz");
-      index += 1;
-    } else if (index % 3 === 0) {
-      console.log("Fizz");
-      index += 1;
-    } else if (index % 5 === 0) {
-      console.log("Buzz");
-      index += 1;
-    } else {
-      console.log(index);
-      index += 1;
-    }
+while (index <= 100) {
+  if (index % 3 === 0 && index % 5 === 0) {
+    console.log("FizzBuzz");
+    index += 1;
+  } else if (index % 3 === 0) {
+    console.log("Fizz");
+    index += 1;
+  } else if (index % 5 === 0) {
+    console.log("Buzz");
+    index += 1;
+  } else {
+    console.log(index);
+    index += 1;
   }
 }
-
-fizzBuzz();
