@@ -96,3 +96,35 @@ function sum(range) {
 console.log(sum(range(1, 10)));
 
 //
+
+/* 
+FizzBuzz test
+
+Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz”
+instead of the number and for the multiples of five print “Buzz”. For numbers which are
+multiples of both three and five print “FizzBuzz".
+
+Write this as a higher order function
+*/
+
+function fizzBuzz() {
+  var index = 1;
+
+  while (index <= 100) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      console.log("FizzBuzz");
+      index += 1;
+    } else if (index % 3 === 0) {
+      console.log("Fizz");
+      index += 1;
+    } else if (index % 5 === 0) {
+      console.log("Buzz");
+      index += 1;
+    } else {
+      console.log(index);
+      index += 1;
+    }
+  }
+}
+
+fizzBuzz();
