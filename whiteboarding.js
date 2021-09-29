@@ -141,3 +141,37 @@ function longestWord(array) {
 }
 
 console.log(longestWord(words));
+
+// Most commonly used character in a string
+
+function mostUsed(string) {
+  var splitString = string.split("");
+  var letterFrequencies = {};
+  var index = 0;
+
+  while (index < splitString.length) {
+    if (letterFrequencies[splitString[index]] === undefined) {
+      letterFrequencies[splitString[index]] = 0;
+    }
+    letterFrequencies[splitString[index]] += 1;
+    index += 1;
+  }
+  return letterFrequencies;
+}
+
+function getSortedHash(inputHash) {
+  var resultHash = {};
+
+  var keys = Object.keys(inputHash);
+  keys
+    .sort(function (a, b) {
+      return inputHash[a] - inputHash[b];
+    })
+    .reverse()
+    .forEach(function (k) {
+      resultHash[k] = inputHash[k];
+    });
+  return resultHash;
+}
+
+console.log(getSortedHash(mostUsed("cheesecake")));
