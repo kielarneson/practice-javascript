@@ -107,23 +107,40 @@ multiples of both three and five print “FizzBuzz".
 Write this as a higher order function
 */
 
-var index = 1;
+// var index = 1;
 
-while (index <= 100) {
-  if (index % 3 === 0 && index % 5 === 0) {
-    console.log("FizzBuzz");
-    index += 1;
-  } else if (index % 3 === 0) {
-    console.log("Fizz");
-    index += 1;
-  } else if (index % 5 === 0) {
-    console.log("Buzz");
-    index += 1;
-  } else {
-    console.log(index);
-    index += 1;
-  }
+// while (index <= 100) {
+//   if (index % 3 === 0 && index % 5 === 0) {
+//     console.log("FizzBuzz");
+//     index += 1;
+//   } else if (index % 3 === 0) {
+//     console.log("Fizz");
+//     index += 1;
+//   } else if (index % 5 === 0) {
+//     console.log("Buzz");
+//     index += 1;
+//   } else {
+//     console.log(index);
+//     index += 1;
+//   }
+// }
+
+function fizzbuzz(array) {
+  array.forEach(function (number) {
+    if (number % 15 === 0) {
+      console.log("FizzBuzz");
+    } else if (number % 3 === 0) {
+      console.log("fizz");
+    } else if (number % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(number);
+    }
+  });
 }
+
+// Pulling range function from above example
+fizzbuzz(range(1, 100));
 
 // Longest string in an array
 
