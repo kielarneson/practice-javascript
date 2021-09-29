@@ -124,3 +124,20 @@ while (index <= 100) {
     index += 1;
   }
 }
+
+// Longest string in an array
+
+var words = ["apple", "telephone", "ant", "reptile"];
+
+function longestWord(array) {
+  var longestWord = array[0];
+
+  array.forEach(function (word) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  });
+  return longestWord;
+}
+
+console.log(longestWord(words));
