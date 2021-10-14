@@ -47,5 +47,19 @@ while index < 1
   puts "DEALER TOTAL: #{dealer_second_card.value}"
   puts ""
 
+  # Blackjack logic
+  if player_first_card.value == 10 && player_second_card.value == 11
+    puts "BLACKJACK! Player wins hand."
+  elsif player_second_card.value == 10 && player_first_card.value == 11
+    puts "BLACKJACK! Player wins hand."
+  elsif dealer_first_card.value == 10 && dealer_second_card.value == 11
+    puts "BLACKJACK! Dealer wins hand."
+  elsif dealer_second_card.value == 10 && dealer_first_card.value == 11
+    puts "Dealer's first card is a #{dealer_first_card.name} of #{dealer_first_card.suit}"
+    puts "BLACKJACK! Dealer wins hand."
+  else
+    puts "PLAYER, hit or stay?"
+  end
+
   index += 1
 end
