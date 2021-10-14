@@ -29,5 +29,16 @@ while index < 1
   dealer_first_card = dealer_hand.cards[0]
   dealer_second_card = dealer_hand.cards[1]
 
+  # If either card is an ace set the ace's value to 11
+  if player_hand.cards.length == 2 && player_first_card.name == :ace
+    player_first_card.value = 11
+  elsif player_hand.cards.length == 2 && player_second_card.name == :ace
+    player_second_card.value = 11
+  elsif dealer_hand.cards.length == 2 && dealer_first_card.name == :ace
+    dealer_first_card.value = 11
+  elsif dealer_hand.cards.length == 2 && dealer_second_card.name == :ace
+    dealer_second_card.value = 11
+  end
+
   index += 1
 end
