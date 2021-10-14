@@ -40,5 +40,12 @@ while index < 1
     dealer_second_card.value = 11
   end
 
+  # Displaying game information
+  puts "PLAYERS HAND: #{player_first_card.name} of #{player_first_card.suit} and #{player_second_card.name} of #{player_second_card.suit}"
+  puts "PLAYER TOTAL: #{player_first_card.value + player_second_card.value}"
+  puts "DEALER SHOWING: #{dealer_second_card.name} of #{dealer_second_card.suit}"
+  puts "DEALER TOTAL: #{dealer_second_card.value}"
+  puts ""
+
   index += 1
 end
