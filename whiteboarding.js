@@ -107,6 +107,8 @@ multiples of both three and five print “FizzBuzz".
 Write this as a higher order function
 */
 
+// Original solution
+
 // var index = 1;
 
 // while (index <= 100) {
@@ -176,6 +178,7 @@ function mostUsed(string) {
   return letterFrequencies;
 }
 
+// Sorting hash (dont really fully understand this logic)
 function getSortedHash(inputHash) {
   var resultHash = {};
 
@@ -192,3 +195,6 @@ function getSortedHash(inputHash) {
 }
 
 console.log(getSortedHash(mostUsed("cheesecake")));
+
+var name = "Kiel Arneson";
+console.log(name.split(" ")[1][0]);
