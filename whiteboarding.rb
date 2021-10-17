@@ -107,3 +107,29 @@ p chocolate(numbers, 4, 2)
 # p s.slice(1..m)
 # p s.slice(2..m + 1)
 # p s.slice(3..m + 2)
+
+# Sales by match 
+
+numbers = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+
+def pairs(ar)
+  index1 = ar.length - 1
+  index2 = index1 - 1
+  count = 0
+
+  while index1 > 0
+    while index2 >= 0
+      if ar[index1] == ar[index2]
+        count += 1
+        ar.delete_at(index1)
+        ar.delete_at(index2)
+      end
+      index2 -= 1
+    end
+    index1 -= 1
+    index2 = index1 - 1
+  end
+  return count
+end
+
+p pairs(numbers)
