@@ -81,3 +81,29 @@ def sequential_bigrams(string)
 end
 
 sequential_bigrams(string)
+
+# Subarray Division 2
+
+numbers = [2, 2, 1, 3, 2]
+
+def chocolate(s, d, m)
+  s_index = 0
+  m_index = m - 1
+  count = 0
+
+  while m_index < s.length
+    if s.slice(s_index..m_index).reduce(:+) == d
+      count += 1
+    end
+    s_index += 1
+    m_index += 1
+  end
+  return count
+end
+
+p chocolate(numbers, 4, 2)
+
+# p s.slice(0..m - 1)
+# p s.slice(1..m)
+# p s.slice(2..m + 1)
+# p s.slice(3..m + 2)
