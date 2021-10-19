@@ -143,26 +143,84 @@ p pairs(numbers)
 # return lowest key value
 # Else return the last key value in the array
 
-birds = [1, 1, 2, 2, 3, 4, 2, 2]
+# birds = [1, 1, 2, 2, 3, 4, 2, 2]
 
-def bird_count(array)
-  counts = Hash.new 0
+# def bird_count(array)
+#   counts = Hash.new 0
 
-  array.each do |bird|
-    counts[bird] += 1
-  end
+#   array.each do |bird|
+#     counts[bird] += 1
+#   end
 
-  counts = counts.sort_by { |_k, v| v }
+#   counts = counts.sort_by { |_k, v| v }
 
-  if counts[-1][1] == counts[-2][1]
-    if counts[-1][0] < counts[-2][0]
-      return counts[-1][0]
-    else
-      return counts[-2][0]
+#   if counts[-1][1] == counts[-2][1]
+#     if counts[-1][0] < counts[-2][0]
+#       return counts[-1][0]
+#     else
+#       return counts[-2][0]
+#     end
+#   else
+#     return counts[-1][0]
+#   end
+# end
+
+# p bird_count(birds)
+
+# Drawing Book
+# Create function that takes in a number of pages (n) and page we are trying to flip to (p)
+# Generate book layout (array of arrays) depending on whether page total is even or odd
+# Create while loop to count number of page flips from front (count will be index)
+# Create while loop to count number of page flips from back (count will be (pages / 2) - index)
+# Write conditional to determine which flip count is smaller
+# Return smallest flip count
+
+def lowest_flips(n, p)
+  # Generating book layout for both even and odd total pages
+  book = [[1]]
+
+  index1 = 0
+  index2 = 1
+  if n.odd?
+    while index2 < n
+      book << [index1 += 2, index2 += 2]
     end
   else
-    return counts[-1][0]
+    while index2 < n
+      book << [index1 += 2, index2 += 2]
+    end
+    book.last.pop
+  end
+  p book
+
+  # Flips from front
+  from_front_index = 0
+  while from_front_index < book.length
+    if book[from_front_index][0] == p || book[from_front_index][1] == p
+      break
+    end
+    from_front_index += 1
+  end
+
+  # Flips from back
+  from_back_index = n / 2
+  while from_back_index > 0
+    if book[from_back_index][0] == p || book[from_back_index][1] == p
+      break
+    end
+    from_back_index -= 1
+  end
+  from_back_index = (n / 2) - from_back_index
+
+  # Determining which flip count is lower
+  if from_front_index < from_back_index
+    return from_front_index
+  elsif from_back_index < from_front_index
+    return from_back_index
+  else
+    return from_back_index
   end
 end
 
-p bird_count(birds)
+# p lowest_flips(5, 3)
+p lowest_flips(5, 4)
