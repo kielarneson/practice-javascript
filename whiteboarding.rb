@@ -108,7 +108,7 @@ p chocolate(numbers, 4, 2)
 # p s.slice(2..m + 1)
 # p s.slice(3..m + 2)
 
-# Sales by match 
+# Sales by match
 
 numbers = [10, 20, 20, 10, 10, 30, 50, 10, 20]
 
@@ -133,3 +133,36 @@ def pairs(ar)
 end
 
 p pairs(numbers)
+
+# Migratory Birds
+# Write a function
+# Write each loop to store bird key and how many times each bird appears in a hash
+# Sort hash by value in key/value pair
+# Write if/else conditional to check if the last 2 elements of the sorted hash are equal
+# If equal write additional if/else condititonal to check which key has the lower value
+# return lowest key value
+# Else return the last key value in the array
+
+birds = [1, 1, 2, 2, 3, 4, 2, 2]
+
+def bird_count(array)
+  counts = Hash.new 0
+
+  array.each do |bird|
+    counts[bird] += 1
+  end
+
+  counts = counts.sort_by { |_k, v| v }
+
+  if counts[-1][1] == counts[-2][1]
+    if counts[-1][0] < counts[-2][0]
+      return counts[-1][0]
+    else
+      return counts[-2][0]
+    end
+  else
+    return counts[-1][0]
+  end
+end
+
+p bird_count(birds)
