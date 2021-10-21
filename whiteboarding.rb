@@ -224,3 +224,37 @@ end
 
 # p lowest_flips(5, 3)
 p lowest_flips(5, 4)
+
+# Strong Password
+# This still doesn't work for 1 edge case. Need to add one more conditional for that specific scenario.
+
+def strong_password(string)
+  chars = []
+
+  if string !~ /[!@#$%^&*()-+]/
+    chars << "special"
+  end
+
+  if string !~ /[0123456789]/
+    chars << "number"
+  end
+
+  if string !~ /[a-z]/
+    chars << "lowercase"
+  end
+
+  if string !~ /[A-Z]/
+    chars << "uppercase"
+  end
+
+  if string.length + chars.length >= 6
+    return chars.length
+  elsif (6 - string.length) + chars.length < 6
+    return chars.length
+  else
+    needed_length = 6 - string.length
+    return needed_length
+  end
+end
+
+p strong_password("2")
